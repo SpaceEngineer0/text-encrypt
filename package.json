@@ -1,0 +1,17 @@
+{
+  "name": "text-encrypt",
+  "version": "1.0.0",
+  "description": "Encrypt and decrypt messages using ciphers and keys.",
+  "main": "index.js",
+  "scripts": {  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpaceEngie/text-encrypt.git"
+  },
+  "author": "SpaceEngie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SpaceEngie/text-encrypt/issues"
+  },
+  "homepage": "https://github.com/SpaceEngie/text-encrypt#readme"
+}
