@@ -2,7 +2,7 @@ function encrypt(input, { cipher, key }) {
 	const output = [];
 
 	input.split('').forEach((char, i) => {
-		const offset = key[i % key.length] * -1 % cipher.length;
+		const offset = key[i % key.length] % cipher.length * -1;
 		output.push(offsetChar(char.toLowerCase(), offset, cipher));
 	})
 
@@ -21,14 +21,14 @@ function decrypt(input, { cipher, key }) {
 }
 
 function offsetChar(char, offset, cipher) {
-	if (cipher.includes(char)) {
+	if (cipher.includes(char) && offset !== 0) {
 		const length = cipher.length;
 		const index = cipher.indexOf(char);
 
 		if (index + offset < 0)
 			return cipher[length + index - offset * -1];
 		else if (index + offset > length - 1)
-			return cipher[length - index - offset];
+			return cipher[(length - index - offset) * -1];
 		else
 			return cipher[index + offset];
 	}

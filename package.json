@@ -1,6 +1,6 @@
 {
   "name": "text-encrypt",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Encrypt and decrypt messages using ciphers and keys.",
   "main": "index.js",
   "scripts": {  },
